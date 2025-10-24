@@ -1,0 +1,23 @@
+# Normalize text files and force LF for typical source files
+* text=auto
+
+# Force LF for source files to avoid CRLF/LF warnings
+*.dart text eol=lf
+*.yaml text eol=lf
+*.yml text eol=lf
+*.sh text eol=lf
+
+# Use CRLF for Windows batch/powershell
+*.bat text eol=crlf
+*.ps1 text eol=crlf
+
+# Binary files
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.zip binary
+*.jar binary
+*.so binary
+*.dll binary
