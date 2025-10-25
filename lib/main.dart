@@ -23,14 +23,14 @@ class MobilePlus extends ConsumerWidget {
         ),
         scaffoldBackgroundColor: Colors.green[50], // ensures white Scaffold
       ),
-      title: 'Flutter Demo',
+      title: 'Mobile Plus',
       home:  Scaffold(
         body: Center(
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
-                'Hello, Mobile Plus!',
+                'Welcome, Mobile Plus!',
                 style: TextStyle(fontSize: 24),
               ),
               TextButton(onPressed:(){}, child: Text('Click Me')),
