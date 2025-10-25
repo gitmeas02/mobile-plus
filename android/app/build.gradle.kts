@@ -8,7 +8,9 @@ plugins {
 android {
     namespace = "com.example.mobile_plus"
     compileSdk = flutter.compileSdkVersion
-    ndkVersion = flutter.ndkVersion
+    // Use the highest NDK version required by plugins (flutter_native_splash needs 27.0.12077973)
+    ndkVersion = "27.0.12077973"
+    // ndkVersion = flutter.ndkVersion
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11

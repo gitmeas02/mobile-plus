@@ -1,4 +1,4 @@
-name: Mobile Plus
+name: 'mobile_plus'
 description: "A new Flutter project."
 
 publish_to: 'none'
@@ -17,6 +17,8 @@ dependencies:
 
   cupertino_icons: ^1.0.8
   flutter_riverpod: ^3.0.3
+  flutter_native_splash: ^2.4.7
+  flutter_launcher_icons: ^0.14.4
 
 dev_dependencies:
   flutter_test:
@@ -27,6 +29,25 @@ dev_dependencies:
   riverpod_lint: ^3.0.3
 
 # The following section is specific to Flutter packages.
+
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: "assets/images/logo.jpg" # your 512x512 PNG
+
+flutter_native_splash:
+  color: "#ffffff"
+  image: "assets/images/splash.jpg"
+  android: true
+  ios: true
+  fill: true
+  ios_uses_light_mode: false
+  android_12:
+    image: "assets/images/splash.jpg"
+    icon_background_color: "#ffffff"
+  web: false
+
+
 flutter:
 
   uses-material-design: true
