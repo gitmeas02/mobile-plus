@@ -1,19 +1,17 @@
-import 'dart:io';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class LoginButtonWidget extends ConsumerWidget {
-  final VoidCallback onPressed;
-  final String text;
-  final String link;
-  final String image;
+  final VoidCallback? onPressed;
+  final String? text;
+  final String? link;
+  final String? image;
   const LoginButtonWidget({
     super.key,
-    required this.onPressed,
-    required this.text,
-    required this.link,
-    required this.image,
+    this.onPressed,
+    this.text,
+    this.link,
+    this.image,
   });
 
   @override
@@ -22,7 +20,7 @@ class LoginButtonWidget extends ConsumerWidget {
       width: double.infinity,
       height: 54,
       child: ElevatedButton(
-        clipBehavior: Clip.values.first,
+        clipBehavior: Clip.antiAlias,
         onPressed: onPressed,
         style: ElevatedButton.styleFrom(
           padding: EdgeInsets.symmetric(horizontal: 24.0, vertical: 12.0),
@@ -38,12 +36,12 @@ class LoginButtonWidget extends ConsumerWidget {
           spacing: 4.0,
           children:[
             Image.network(
-              image,
+              image ?? '',
               height: 24,
               width: 24,
             ),
             SizedBox(width: 12),
-            Flexible(child: Text(text)),
+            Flexible(child: Text(text ?? '')),
           ]
       ),
     ));
