@@ -1,11 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:mobile_plus/router/router.dart';
 
-void main() {
+Future<void> main() async {
   WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
   FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
+  
+  // Load environment variables from .env file
+  await dotenv.load(fileName: ".env");
+  
   runApp(ProviderScope(child: const MobilePlus()));
   // Remove the splash after the app has been started
   FlutterNativeSplash.remove();
