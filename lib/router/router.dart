@@ -4,6 +4,7 @@ import 'package:go_router/go_router.dart';
 import 'package:mobile_plus/features/introduction/presentation/page/introduction_page.dart';
 import 'package:mobile_plus/layout/one_time_screen.dart';
 import 'package:mobile_plus/layout/splash_screen.dart';
+import 'package:mobile_plus/router/auth/auth_routes.dart';
 import 'package:mobile_plus/router/home_routes.dart';
 import 'package:mobile_plus/router/social_routes.dart';
 final routerKeyProvider = Provider((_) => GlobalKey<NavigatorState>());
@@ -19,6 +20,7 @@ final goRouterProvider= Provider<GoRouter>((ref){
   GoRoute(path: '/welcome', builder: (context, state) => const OneTimeScreen()),
   GoRoute(name: 'introduction',path: '/introduction',builder: (context, state) => const IntroductionPage(),
       ),
+      ...authRoutes,
       ...homeRoutes,
       ...socialRoutes,
     ],

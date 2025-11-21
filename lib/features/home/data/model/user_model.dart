@@ -3,18 +3,18 @@ import 'dart:convert';
 
 class UserModel {
   final String id;
-  final String name;
+  final String username;
   final String email;
   UserModel({
     required this.id,
-    required this.name,
+    required this.username,
     required this.email,
   }); 
  
   Map<String, dynamic> toMap() {
     return <String, dynamic>{
       'id': id,
-      'name': name,
+      'username': username,
       'email': email,
     };
   }
@@ -22,7 +22,7 @@ class UserModel {
   factory UserModel.fromMap(Map<String, dynamic> map) {
     return UserModel(
       id: map['id'] as String,
-      name: map['name'] as String,
+      username: map['username'] as String,
       email: map['email'] as String,
     );
   }
